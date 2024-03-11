@@ -4,6 +4,8 @@ import swaggerUi from "swagger-ui-express";
 import { router } from "./Routes";
 import swaggerFile from "./swagger.json";
 
+import "./Database"
+
 const app = express();
 
 app.use(express.json());
