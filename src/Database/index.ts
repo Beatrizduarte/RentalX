@@ -1,18 +1,13 @@
-import { DataSource } from "typeorm";
+import { createConnection, getConnectionOptions } from 'typeorm';
 
-const AppDataSource = new DataSource({
-  type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "docker",
-  password: "1234",
-  database: "rentx",
-})
+interface IOptions {
+  host: string;
+}
 
-AppDataSource.initialize()
-  .then(() => {
-    console.log("Data Source has been initialized!")
-  })
-  .catch((err) => {
-    console.error("Error during Data Source initialization", err)
-  })
+getConnectionOptions().then(options => {
+  const newOptions = options as IOptions;
+  newOptions.host = 'database'; //Essa opção deverá ser EXATAMENTE o nome dado ao service do banco de dados
+  createConnection({
+    ...options,
+  });
+});
