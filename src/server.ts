@@ -10,7 +10,6 @@ import { router } from "./Routes";
 import swaggerFile from "./swagger.json";
 import { AppError } from "./Errors/AppErrors";
 
-
 const app = express();
 
 app.use(express.json());
