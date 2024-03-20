@@ -1,7 +1,6 @@
+import { ICategoriesRepository } from "@modules/Cars/Repositories/ICategoriesRepository";
 import { parse as csvParse } from "csv-parse";
 import fs from "fs";
-
-import { ICategoriesRepository } from "../../Repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 
 interface IImportCategory {
