@@ -6,12 +6,12 @@
   "password": "docker1234",
   "database": "rentx",
   "migrations": [
-    "./src/Database/migrations/*.ts"
+    "./src/Shared/Infra/Typeorm/Migrations/*.ts"
   ],
   "entities": [
     "./src/Modules/**/Entities/*.ts"
   ],
   "cli": {
-    "migrationsDir": "./src/Database/migrations"
+    "migrationsDir": "./src/Shared/Infra/Typeorm/Migrations"
   }
 }
