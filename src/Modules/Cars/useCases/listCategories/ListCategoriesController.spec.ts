@@ -43,11 +43,8 @@ describe("Create Category Controller", () => {
       Authorization: `Bearer ${token}`
     })
 
-    console.log(test.status);
 
     const response = await request(app).get("/categories");
-
-    console.log(response);
 
     expect(response.status).toBe(200);
     // expect(response.body.leng).toBe(1);
